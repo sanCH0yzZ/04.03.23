@@ -32,26 +32,37 @@ print(guests)"""
   #  if not any(my_list):
   #      break
 #print('it"s time to pay')
+list_=['yellow','red','blue','dark']
+list1=[]
+for i in list_:
+    c=i[::-1]
+    list1.append(c)
+list1.sort(key=lambda x: len(x))
+print(list1)
 
-while True:
-    valuta=input('введите валюту (сом или доллар)')
-    summa=int(input(f'введите сумму которую хотите перевести в {valuta}ы'))
-    
-    if valuta=='сом':
-        total=summa *84.80
-        print(round(total),1)
-    elif valuta=='доллар':
-        total=summa /84.80
-        print(round(total),1)
-    else:
-        print('введите правильные данные')
-        continue
-    
-    choice=input('хотите продолжить?')
-    if choice =='да':
-        continue
-    else:
-        break
+
+#task32
+list1=[1,2,3,4,5,6,7,8,9]
+element='A'
+step=2
+for i in range(0,len(list1),step):
+    list1.insert(i+step,element)
+print(list1)
+
+
+#task33
+list1=[[1,2,3],[2,3,4,5],[43,34,343434]]
+max_sublist=max(list1,key=sum)
+print(max_sublist)
+
+
+#task34
+list_=[1,1,1,2,2,3,4,4,5]
+bebra=[]
+for i in list_:
+    if list_.count(i) >1 and i not in bebra:
+        bebra.append(i)
+print(bebra)
     
 
     
